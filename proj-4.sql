@@ -29,6 +29,35 @@ CREATE TABLE Destination_Review (
     PRIMARY KEY (reviewID)
 );
 
+CREATE Travel_Survey (
+    survey_id INT,
+    question_number INT,
+    user_choice ENUM('0', '1'),
+    option1 VARCHAR(15),
+    option2 VARCHAR(15),
+    PRIMARY KEY (survey_id, question_number)
+);
+
+CREATE Survey_Results (
+    survey_id INT AUTO_INCREMENT,
+    question_number INT,
+    city VARCHAR(15),
+    country VARCHAR(15),
+    PRIMARY KEY (survey_id, question_number, city, country)
+);
+
+CREATE Travel_Survey_User (
+    username VARCHAR(15),
+    survey_id INT,
+    PRIMARY KEY (username, survey_id)
+);
+
+CREATE Feedback_Survey_User (
+    username VARCHAR(15),
+    survey_id INT AUTO_INCREMENT,
+    PRIMARY KEY (username, survey_id)
+);
+
 
 
 
