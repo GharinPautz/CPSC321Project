@@ -22,10 +22,13 @@ CREATE TABLE Destinations (
 );
 
 CREATE TABLE Destination_Review (
-	reviewID , 
-    destination, 
-    review,
+	reviewID INT AUTO_INCREMENT, 
+    destination_city VARCHAR(15),
+    destination_country VARCHAR(15),
+    review TEXT,
     PRIMARY KEY (reviewID)
 );
+
+
 
 
