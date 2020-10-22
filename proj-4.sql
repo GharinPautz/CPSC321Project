@@ -29,7 +29,6 @@ CREATE TABLE Destination_Review (
     PRIMARY KEY (review_id)
 );
 
-<<<<<<< HEAD
 CREATE Travel_Survey (
     survey_id INT,
     question_number INT,
@@ -59,7 +58,6 @@ CREATE Feedback_Survey_User (
     PRIMARY KEY (username, survey_id)
 );
 
-=======
 CREATE TABLE User (
 	username VARCHAR(20),
     password VARCHAR(30),
@@ -80,8 +78,4 @@ CREATE TABLE Feedback_Survey (
     review_id INT,
     PRIMARY KEY (survey_id),
     FOREIGN KEY (destination_city, destination_country) REFERENCES Destinations (city, country)
-)
->>>>>>> 9cda8b39cda1723a4cbbc4c88edb5917f1674e18
-
-
-
+);
