@@ -117,3 +117,21 @@ INSERT INTO Destinations VALUES ("Bali", "Indonesia", true, true, true, false, t
                                 ("Marrakesh", "Morocco", false, false, false, true, false, false, true, true, 4.1),
                                 ("Sydney", "Australia", true, false, true, false, true, true, false, true, 4.3),
                                 ("Paris", "France", false, false, true, true, false, false, false, false, 3.9);
+
+INSERT INTO User Values 
+("gpautz", "rainbow!", "Ghar", "Pautz", "123 Ermina Ave", "12345"),
+("kcolson", "unicorn!", "Kellie", "Colson", "675 Kennedy Ave", "12345"),
+("sbowers", "chipmunk!", "Shawn", "Bowers", "435 Sharp St", "12345");
+
+-- Travel_Survey_User(username, survey_id)
+INSERT INTO Travel_Survey Values
+(1, 1, '0', 'Beaches', 'Mountains'),
+(1, 2, '1', 'Historic', 'Modern'),
+(1, 3, '1', 'Adventurous', 'Family-friendly'),
+(1, 4, '0', 'Traveling with a companion', 'Traveling alone'),
+(1, 5, '1', 'Relaxing', 'Fast-paced'),
+(2, 1, '0', 'Beaches', 'Mountains'),
+(2, 2, '0', 'Historic', 'Modern'),
+(2, 3, '0', 'Adventurous', 'Family-friendly'),
+(2, 4, '1', 'Traveling with a companion', 'Traveling alone'),
+(2, 5, '1', 'Relaxing', 'Fast-paced');
