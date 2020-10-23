@@ -38,8 +38,8 @@ CREATE TABLE Travel_Survey (
     survey_id INT AUTO_INCREMENT,
     question_number INT,
     user_choice ENUM('0', '1'),
-    option1 VARCHAR(15),
-    option2 VARCHAR(15),
+    option1 VARCHAR(30),
+    option2 VARCHAR(30),
     PRIMARY KEY (survey_id, question_number)
 );
 
@@ -51,6 +51,7 @@ CREATE TABLE User (
     city VARCHAR(20),
     state VARCHAR(15),
     address VARCHAR(50),
+    country VARCHAR(15),
     zipcode CHAR(5),
     PRIMARY KEY (username)
 );
@@ -107,9 +108,9 @@ INSERT INTO Destinations VALUES ("Bali", "Indonesia", true, true, true, false, t
 
 -- User(username, password, name, city, state, address, country, zipcode)
 INSERT INTO User Values 
-("gpautz", "rainbow!", "Ghar", "Pautz", "123 Ermina Ave", "12345"),
-("kcolson", "unicorn!", "Kellie", "Colson", "675 Kennedy Ave", "12345"),
-("sbowers", "chipmunk!", "Shawn", "Bowers", "435 Sharp St", "12345");
+("gpautz", "rainbow!", "Ghar Pautz", "Spokane", "Washington", "123 Ermina Ave", "USA", "12345"),
+("kcolson", "unicorn!", "Kellie Colson", "Spokane", "Washington", "675 Kennedy Ave", "USA", "12345"),
+("sbowers", "chipmunk!", "Shawn Bowers", "Spokane", "Washington", "435 Sharp St", "USA", "12345");
 
 -- Travel_Survey_User(username, survey_id)
 INSERT INTO Travel_Survey Values
@@ -133,6 +134,11 @@ INSERT INTO Travel_Survey Values
 INSERT INTO Feedback_Survey VALUES (1, "Paris", "France", 4.5, "Paris had so many sights to see, I wish I had more time to explore the city!"),
 								   (2, "Kerry", "Ireland", 4.0, "Kerry was so beautiful!"),
                                    (3, "Sydney", "Australia", 5.0, "Best vacation ever!");
+                   
+-- Feedback_Survey_User(username, survey_id)
+INSERT INTO Feedback_Survey_User VALUES ("kcolson", 1),
+										("gpautz", 3),
+                                        ("sbowers", 2);
 
 -- Travel_Survey_User(username, survey_id)
 INSERT INTO Travel_Survey_User VALUES
