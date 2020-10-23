@@ -7,8 +7,7 @@
 SET sql_mode = STRICT_ALL_TABLES;
 
 -- ***DROP STATEMENTS***
-DROP TABLE Destination_Review, 
-           Feedback_Survey_User,
+DROP TABLE Feedback_Survey_User,
            Travel_Survey_User,
 		   Survey_Results,
 		   Feedback_Survey, 
@@ -65,18 +64,6 @@ CREATE TABLE Feedback_Survey (
     review TEXT,
     PRIMARY KEY (survey_id),
     FOREIGN KEY (destination_city, destination_country) REFERENCES Destinations (city, country) ON DELETE CASCADE
-);
-
--- create table statement for Destination_Review table holding information about a review for a destination
-CREATE TABLE Destination_Review (
-	review_id INT AUTO_INCREMENT, 
-    destination_city VARCHAR(15),
-    destination_country VARCHAR(15),
-    review TEXT,
-    survey_id INT, 
-    PRIMARY KEY (review_id),
-    FOREIGN KEY (destination_city, destination_country) REFERENCES Destinations (city, country) ON DELETE CASCADE,
-    FOREIGN KEY (survey_id) REFERENCES Feedback_Survey (survey_id) ON DELETE CASCADE
 );
 
 -- create table statement for Survey_Results table holding information regarding the destination results from taking a travel survey
