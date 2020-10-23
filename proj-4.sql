@@ -28,7 +28,7 @@ CREATE TABLE Destinations (
     is_historic BOOL,
     is_adventurous BOOL,
     is_family_friendly BOOL, 
-    has_travel_companion BOOL, 
+    need_travel_companion BOOL, 
     is_relaxing BOOL,
     average_rating FLOAT,
     PRIMARY KEY (city, country)
@@ -110,3 +110,10 @@ CREATE TABLE Feedback_Survey_User (
 
 
 -- ***INSERT STATEMENTS***
+
+-- Destinations(city, country, has_beaches, has_mountains, is_modern, is_historic, is_adventurous, is_family_friendly, need_travel_companion, is_relaxing, rating)
+INSERT INTO Destinations VALUES ("Bali", "Indonesia", true, true, true, false, true, true, false, true, 4.0),
+								("Kerry", "Ireland", false, true, false, true, true, true, false, false, 4.5),
+                                ("Marrakesh", "Morocco", false, false, false, true, false, false, true, true, 4.1),
+                                ("Sydney", "Australia", true, false, true, false, true, true, false, true, 4.3),
+                                ("Paris", "France", false, false, true, true, false, false, false, false, 3.9);
