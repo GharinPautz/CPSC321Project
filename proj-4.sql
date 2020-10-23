@@ -139,3 +139,21 @@ INSERT INTO Travel_Survey_User VALUES
 ('gpautz', 1),
 ('kcolson', 2),
 ('sbowers', 3);
+
+-- Survey_Results(survey_id,question_number, city, country)
+INSERT INTO Survey_Results VALUES
+(1, 1, 'Sydney', 'Australia'),
+(1, 2, 'Paris', 'France'),
+(1, 3, 'Kerry', 'Ireland'),
+(1, 4, 'Sydney', 'Australia'),
+(1, 5, 'Paris', 'France'),
+(2, 1, 'Sydney', 'Australia'),
+(2, 2, 'Paris', 'France'),
+(2, 3, 'Kerry', 'Ireland'),
+(2, 4, 'Sydney', 'Australia'),
+(2, 5, 'Paris', 'France'),
+(3, 1, 'Sydney', 'Australia'),
+(3, 2, 'Paris', 'France'),
+(3, 3, 'Kerry', 'Ireland'),
+(3, 4, 'Sydney', 'Australia'),
+(3, 5, 'Paris', 'France');
