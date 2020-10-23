@@ -29,7 +29,7 @@ CREATE TABLE Destination_Review (
     PRIMARY KEY (review_id)
 );
 
-CREATE Travel_Survey (
+CREATE TABLE Travel_Survey (
     survey_id INT,
     question_number INT,
     user_choice ENUM('0', '1'),
@@ -38,7 +38,7 @@ CREATE Travel_Survey (
     PRIMARY KEY (survey_id, question_number)
 );
 
-CREATE Survey_Results (
+CREATE TABLE Survey_Results (
     survey_id INT AUTO_INCREMENT,
     question_number INT,
     city VARCHAR(15),
@@ -46,13 +46,13 @@ CREATE Survey_Results (
     PRIMARY KEY (survey_id, question_number, city, country)
 );
 
-CREATE Travel_Survey_User (
+CREATE TABLE Travel_Survey_User (
     username VARCHAR(15),
     survey_id INT,
     PRIMARY KEY (username, survey_id)
 );
 
-CREATE Feedback_Survey_User (
+CREATE TABLE Feedback_Survey_User (
     username VARCHAR(15),
     survey_id INT AUTO_INCREMENT,
     PRIMARY KEY (username, survey_id)
